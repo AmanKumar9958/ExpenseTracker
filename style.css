@@ -1,6 +1,160 @@
-*{
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/* Upper Box */
+.upper-box {
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.upper-box .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.upper-box h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Mid Box */
+.mid-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f9c5d1;
+    padding: 1.5rem;
+}
+
+.input-box {
+    outline: none;
+    width: 10vw;
+    min-width: 120px;
+    height: 5vh;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+#transaction-add{
+    width: fit-content;
+}
+.input-box:focus {
+    border-color: #56ab2f;
+    box-shadow: 0 0 5px rgba(86, 171, 47, 0.5);
+}
+
+.add-button button {
+    background: #56ab2f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.add-button button:hover {
+    background: #3d8b1e;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bottom Box */
+.bottom-box {
+    background: #a8e063;
+    padding: 1rem;
+}
+
+.bottom-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-box li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.bottom-box li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-box p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.bottom-box button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bottom-box button:hover {
+    background-color: #c30010;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mid-box {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .input-box, .add-button button {
+        width: 100%;
+    }
+    .bottom-box li {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
